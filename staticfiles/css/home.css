@@ -1,0 +1,352 @@
+
+
+/* GENERAL */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+/* NAVBAR */
+.navbar {
+    width: 100%;
+    min-height: 80px;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 25px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.myself {
+    color: aliceblue;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.mylogo {
+    margin-left: 15px;
+    background-color: darkgray;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    border: 4px solid darkgray;
+    flex-shrink: 0;
+}
+
+.mylogo img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.name {
+    color: white;
+    padding-left: 10px;
+    font-size: x-large;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.sections {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 35px;
+}
+
+.home a button,
+.about a button,
+.portfolio a button,
+.contact a button {
+    background-color: black;
+    color: white;
+    font-size: larger;
+    border: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 8px 12px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.home a button:active,
+.about a button:active,
+.portfolio a button:active,
+.contact a button:active {
+    background-color: plum;
+}
+
+/* MAIN HOME */
+.mainhome {
+    display: flex;
+    width: 100%;
+    min-height: 800px;
+    background-color: rgb(174, 205, 233);
+    align-items: center;
+    justify-content: space-around;
+    padding: 100px 40px 40px;
+}
+
+/* INTRODUCTION */
+.myindro {
+    width: 55%;
+    max-width: 800px;
+    min-height: 600px;
+    padding-top: 20px;
+}
+
+.myindro h1 {
+    padding-left: 100px;
+    padding-top: 100px;
+    font-family: Arial, sans-serif;
+    font-weight: 700;
+    font-size: xxx-large;
+}
+
+.myindro p {
+    padding-left: 100px;
+    padding-top: 19px;
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 1.7;
+    word-spacing: 2px;
+    font-weight: 550;
+}
+
+.myindro button {
+    padding: 14px;
+    margin-left: 100px;
+    margin-top: 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: plum;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: medium;
+    box-shadow: 4px 4px 9px rgb(141, 208, 244);
+    cursor: pointer;
+}
+
+/* HOME PHOTO */
+.homephoto {
+    background-color: bisque;
+    margin-top: 20px;
+    width: 400px;
+    max-width: 40%;
+    height: 500px;
+    border-radius: 15px;
+    box-shadow: 8px 9px 25px #fffdfd;
+    flex-shrink: 0;
+}
+
+.homephoto img {
+    width: 100%;
+    height: 500px;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+/* =================================
+   TABLET RESPONSIVE
+================================= */
+
+@media screen and (max-width: 900px) {
+
+    .navbar {
+        padding: 10px 15px;
+    }
+
+    .sections {
+        gap: 10px;
+    }
+
+    .myself {
+        padding-left: 0;
+    }
+
+    .mainhome {
+        padding: 120px 25px 40px;
+        min-height: 750px;
+        gap: 15px;
+    }
+
+    .myindro {
+        width: 55%;
+        min-height: auto;
+    }
+
+    .myindro h1 {
+        padding-left: 20px;
+        padding-top: 50px;
+        font-size: 38px;
+    }
+
+    .myindro p {
+        padding-left: 20px;
+        font-size: 14px;
+    }
+
+    .myindro p br {
+        display: none;
+    }
+
+    .myindro button {
+        margin-left: 20px;
+    }
+
+    .homephoto {
+        width: 320px;
+        max-width: 42%;
+        height: 420px;
+    }
+
+    .homephoto img {
+        height: 420px;
+    }
+}
+
+/* =================================
+   MOBILE RESPONSIVE
+================================= */
+
+@media screen and (max-width: 600px) {
+
+    .navbar {
+        min-height: auto;
+        padding: 10px;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .myself {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .mylogo {
+        width: 45px;
+        height: 45px;
+        margin-left: 0;
+    }
+
+    .name {
+        font-size: 21px;
+        padding-top: 0;
+    }
+
+    .sections {
+        width: 100%;
+        justify-content: center;
+        gap: 5px;
+        flex-wrap: wrap;
+    }
+
+    .home a button,
+    .about a button,
+    .portfolio a button,
+    .contact a button {
+        font-size: 14px;
+        padding: 7px 9px;
+    }
+
+    .mainhome {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        min-height: auto;
+        padding: 150px 20px 50px;
+        gap: 35px;
+    }
+
+    .myindro {
+        width: 100%;
+        min-height: auto;
+        padding-top: 0;
+    }
+
+    .myindro h1 {
+        padding: 0;
+        margin: 10px 0 20px;
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .myindro p {
+        padding: 0;
+        margin: 15px 0;
+        font-size: 14px;
+        line-height: 1.7;
+        text-align: center;
+    }
+
+    .myindro p br {
+        display: none;
+    }
+
+    .myindro a {
+        display: block;
+        text-align: center;
+    }
+
+    .myindro button {
+        margin: 15px 0 0;
+    }
+
+    .homephoto {
+        width: 100%;
+        max-width: 350px;
+        height: 400px;
+        margin: 0;
+    }
+
+    .homephoto img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+    }
+}
+
+/* =================================
+   SMALL MOBILE
+================================= */
+
+@media screen and (max-width: 360px) {
+
+    .sections {
+        gap: 2px;
+    }
+
+    .home a button,
+    .about a button,
+    .portfolio a button,
+    .contact a button {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    .mainhome {
+        padding: 145px 15px 35px;
+    }
+
+    .myindro h1 {
+        font-size: 26px;
+    }
+
+    .myindro p {
+        font-size: 13px;
+    }
+
+    .homephoto {
+        height: 350px;
+    }
+
+    .homephoto img {
+        height: 350px;
+    }
+}

@@ -1,0 +1,354 @@
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: antiquewhite;
+}
+
+/* NAVBAR */
+.navbar {
+    width: 100%;
+    min-height: 80px;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 25px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.myself {
+    color: aliceblue;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.mylogo {
+    margin-left: 15px;
+    background-color: darkgray;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    border: 4px solid darkgray;
+}
+
+.mylogo img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.name {
+    color: white;
+    padding-left: 10px;
+    font-size: x-large;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.sections {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 40px;
+}
+
+.home a button,
+.about a button,
+.portfolio a button,
+.contact a button {
+    background-color: black;
+    color: white;
+    font-size: larger;
+    border: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 8px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.home a button:active,
+.about a button:active,
+.portfolio a button:active,
+.contact a button:active {
+    background-color: plum;
+}
+
+/* CONTACT MAIN SECTION */
+.contact-main {
+    width: 90%;
+    max-width: 1250px;
+    min-height: 650px;
+    background-color: antiquewhite;
+    border-radius: 15px;
+    margin: 110px auto 40px;
+    display: flex;
+    overflow: hidden;
+}
+
+/* LEFT SIDE */
+.contact-leftside {
+    width: 50%;
+    min-height: 640px;
+    background-color: whitesmoke;
+    padding: 20px;
+}
+
+.contact-leftside h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.contact-leftside p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: large;
+    font-weight: 400;
+    padding-left: 10px;
+    color: rgb(102, 99, 99);
+}
+
+.address {
+    width: 100%;
+    max-width: 600px;
+    min-height: 400px;
+    background-color: whitesmoke;
+    margin-top: 50px;
+    padding: 10px;
+}
+
+.location,
+.email,
+.number {
+    width: 100%;
+    max-width: 300px;
+    min-height: 100px;
+    background-color: whitesmoke;
+    border-radius: 15px;
+    padding: 5px;
+    transition: 0.3s;
+}
+
+.location h4,
+.email h4,
+.number h4 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+}
+
+.location p,
+.email p,
+.number p {
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    overflow-wrap: anywhere;
+}
+
+.location:hover,
+.email:hover,
+.number:hover {
+    box-shadow: 5px 5px 3px white;
+}
+
+/* RIGHT SIDE */
+.contact-rightside {
+    width: 50%;
+    min-height: 640px;
+    background-color: antiquewhite;
+    padding: 10px;
+}
+
+.right-img {
+    width: 100%;
+    height: 100%;
+    min-height: 600px;
+}
+
+.img-right {
+    width: 100%;
+    height: 100%;
+    min-height: 600px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* TABLET */
+@media screen and (max-width: 900px) {
+
+    .navbar {
+        padding: 10px 15px;
+    }
+
+    .sections {
+        gap: 15px;
+    }
+
+    .home a button,
+    .about a button,
+    .portfolio a button,
+    .contact a button {
+        font-size: medium;
+    }
+
+    .contact-main {
+        width: 95%;
+        margin-top: 110px;
+    }
+
+    .contact-leftside {
+        padding: 15px;
+    }
+
+    .contact-leftside h1 {
+        font-size: 25px;
+    }
+
+    .contact-leftside p {
+        font-size: medium;
+    }
+
+    .address {
+        margin-top: 30px;
+    }
+
+    .contact-rightside {
+        padding: 8px;
+    }
+}
+
+/* MOBILE */
+@media screen and (max-width: 600px) {
+
+    .navbar {
+        flex-direction: column;
+        position: relative;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .myself {
+        padding-left: 0;
+    }
+
+    .mylogo {
+        width: 50px;
+        height: 50px;
+        margin-left: 0;
+    }
+
+    .mylogo img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .name {
+        font-size: large;
+        padding-top: 0;
+    }
+
+    .sections {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .home a button,
+    .about a button,
+    .portfolio a button,
+    .contact a button {
+        font-size: 14px;
+        padding: 7px;
+    }
+
+    .contact-main {
+        width: 95%;
+        margin: 20px auto;
+        flex-direction: column;
+        min-height: auto;
+    }
+
+    .contact-leftside {
+        width: 100%;
+        min-height: auto;
+        padding: 20px;
+    }
+
+    .contact-leftside h1 {
+        font-size: 25px;
+        padding-left: 0;
+    }
+
+    .contact-leftside p {
+        font-size: 16px;
+        padding-left: 0;
+    }
+
+    .address {
+        width: 100%;
+        min-height: auto;
+        margin: 25px 0 0;
+        padding: 0;
+    }
+
+    .location,
+    .email,
+    .number {
+        width: 100%;
+        min-height: 90px;
+    }
+
+    .contact-rightside {
+        width: 100%;
+        min-height: auto;
+        margin: 0;
+        padding: 10px;
+    }
+
+    .right-img {
+        width: 100%;
+        height: auto;
+        min-height: auto;
+    }
+
+    .img-right {
+        width: 100%;
+        height: auto;
+        min-height: auto;
+        max-height: 450px;
+        object-fit: cover;
+    }
+}
+
+/* SMALL MOBILE */
+@media screen and (max-width: 360px) {
+
+    .sections {
+        gap: 3px;
+    }
+
+    .home a button,
+    .about a button,
+    .portfolio a button,
+    .contact a button {
+        font-size: 12px;
+        padding: 5px;
+    }
+
+    .contact-leftside h1 {
+        font-size: 21px;
+    }
+
+    .contact-leftside p {
+        font-size: 14px;
+    }
+}

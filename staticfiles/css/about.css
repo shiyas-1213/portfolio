@@ -1,0 +1,435 @@
+
+
+/* GENERAL */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+/* NAVBAR */
+.navbar {
+    width: 100%;
+    min-height: 80px;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 25px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.myself {
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+}
+
+.mylogo {
+    margin-left: 15px;
+    background-color: darkgray;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    border: 4px solid darkgray;
+    flex-shrink: 0;
+}
+
+.mylogo img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.name {
+    color: white;
+    padding-left: 10px;
+    font-size: x-large;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.sections {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.home a button,
+.about a button,
+.portfolio a button,
+.contact a button {
+    background-color: black;
+    color: white;
+    font-size: larger;
+    border: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 8px 12px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.home a button:active,
+.about a button:active,
+.portfolio a button:active,
+.contact a button:active {
+    background-color: plum;
+}
+
+/* MAIN ABOUT */
+.mainabout {
+    background-color: rgb(232, 219, 203);
+    width: 100%;
+    min-height: 800px;
+    padding: 1px 20px 50px;
+}
+
+.dummi-about {
+    background-color: rgb(232, 219, 203);
+    height: 120px;
+    width: 100%;
+}
+
+/* ABOUT CONTAINER */
+.mainabou {
+    background-color: whitesmoke;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 600px;
+    margin: auto;
+    border-radius: 15px;
+    display: flex;
+    box-shadow: 3px 3px 2px 4px whitesmoke;
+    padding: 30px 15px;
+    gap: 15px;
+}
+
+/* PROFILE PHOTO */
+.aboutphoto {
+    margin-top: 20px;
+    margin-left: 10px;
+    width: 350px;
+    height: 500px;
+    border-radius: 10px;
+    z-index: 1;
+    flex-shrink: 0;
+}
+
+.aboutphoto img {
+    width: 100%;
+    height: 500px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* SOCIAL ICONS */
+.photoicons {
+    margin-top: -38px;
+    margin-left: 48px;
+    width: 240px;
+    height: 60px;
+    background-color: white;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    z-index: 10;
+    box-shadow: 0px 9px 7px rgb(120, 118, 118);
+}
+
+.iconfb button,
+.iconglobel button,
+.iconinsta button,
+.iconlinked button,
+.iconbe button {
+    width: 46px;
+    background-color: white;
+    color: rgb(68, 68, 214);
+    height: 50px;
+    margin-top: 5px;
+    margin-left: 1px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.iconfb button:hover,
+.iconglobel button:hover,
+.iconinsta button:hover,
+.iconlinked button:hover,
+.iconbe button:hover {
+    background-color: plum;
+    color: white;
+}
+
+/* ABOUT CONTENT */
+.maincontent {
+    margin-top: 20px;
+    margin-left: 16px;
+    width: 600px;
+    min-height: 500px;
+    background-color: whitesmoke;
+    flex: 1;
+    min-width: 0;
+}
+
+.maincontent h2 {
+    font-size: xxx-large;
+    margin-left: 35px;
+    letter-spacing: 2px;
+    word-spacing: 4px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 500;
+}
+
+.totel-content {
+    margin-left: 25px;
+    font-size: large;
+    word-spacing: 4px;
+    line-height: 1.5;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.totel-content p {
+    overflow-wrap: break-word;
+}
+
+.myprojects button {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 550;
+    font-size: medium;
+    padding: 13px 20px;
+    margin-left: 20px;
+    margin-top: 35px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background-color: rgb(194, 140, 244);
+    cursor: pointer;
+}
+
+.myprojects button:hover {
+    background-color: blueviolet;
+}
+
+.mycv button {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 550;
+    font-size: medium;
+    padding: 13px 20px;
+    margin-left: 20px;
+    margin-top: 35px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.mycv button:hover {
+    color: blueviolet;
+    border-color: blueviolet;
+}
+
+/* =================================
+   TABLET RESPONSIVE
+================================= */
+
+@media screen and (max-width: 900px) {
+
+    .navbar {
+        padding: 10px 15px;
+    }
+
+    .sections {
+        gap: 10px;
+    }
+
+    .mainabou {
+        max-width: 750px;
+        gap: 10px;
+    }
+
+    .aboutphoto {
+        width: 280px;
+        height: 450px;
+    }
+
+    .aboutphoto img {
+        height: 450px;
+    }
+
+    .photoicons {
+        margin-left: 20px;
+        width: 240px;
+    }
+
+    .maincontent h2 {
+        font-size: 32px;
+        margin-left: 15px;
+    }
+
+    .totel-content {
+        margin-left: 15px;
+        font-size: 16px;
+    }
+
+    .totel-content br {
+        display: none;
+    }
+}
+
+/* =================================
+   MOBILE RESPONSIVE
+================================= */
+
+@media screen and (max-width: 600px) {
+
+    .navbar {
+        min-height: auto;
+        padding: 10px;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .myself {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .mylogo {
+        width: 45px;
+        height: 45px;
+        margin-left: 0;
+    }
+
+    .name {
+        font-size: 21px;
+        padding-top: 0;
+        display: flex;
+        align-items: center;
+    }
+
+    .sections {
+        width: 100%;
+        justify-content: center;
+        gap: 5px;
+        flex-wrap: wrap;
+    }
+
+    .home a button,
+    .about a button,
+    .portfolio a button,
+    .contact a button {
+        font-size: 14px;
+        padding: 7px 9px;
+    }
+
+    .mainabout {
+        padding: 1px 12px 30px;
+    }
+
+    .dummi-about {
+        height: 125px;
+    }
+
+    .mainabou {
+        width: 100%;
+        min-height: auto;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 12px 30px;
+    }
+
+    .aboutphoto {
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+        margin: 0;
+    }
+
+    .aboutphoto img {
+        width: 100%;
+        height: auto;
+        max-height: 450px;
+        object-fit: cover;
+    }
+
+    .photoicons {
+        margin: -38px auto 0;
+        width: 240px;
+        justify-content: center;
+    }
+
+    .maincontent {
+        width: 100%;
+        height: auto;
+        min-height: auto;
+        margin: 25px 0 0;
+        padding: 0 5px;
+    }
+
+    .maincontent h2 {
+        font-size: 27px;
+        margin: 10px 0 20px;
+        letter-spacing: 1px;
+        word-spacing: 2px;
+    }
+
+    .totel-content {
+        margin: 0;
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .totel-content br {
+        display: none;
+    }
+
+    .myprojects button,
+    .mycv button {
+        margin: 20px 5px 0 0;
+        padding: 11px 13px;
+        font-size: 14px;
+    }
+}
+
+/* =================================
+   SMALL MOBILE
+================================= */
+
+@media screen and (max-width: 360px) {
+
+    .sections {
+        gap: 2px;
+    }
+
+    .home a button,
+    .about a button,
+    .portfolio a button,
+    .contact a button {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    .maincontent h2 {
+        font-size: 23px;
+    }
+
+    .totel-content {
+        font-size: 14px;
+    }
+
+    .photoicons {
+        width: 230px;
+    }
+
+    .iconfb button,
+    .iconglobel button,
+    .iconinsta button,
+    .iconlinked button,
+    .iconbe button {
+        width: 44px;
+    }
+}
